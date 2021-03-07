@@ -7,18 +7,22 @@ class Produto extends Component {
     return (
       <View style={styles.item}>
         <Text style={styles.title}>{this.props.nome}</Text>
-        <Text style={styles.textos}>
-          <strong>Valor:</strong> {this.props.valor}
-        </Text>
-        <Text style={styles.textos}>
-          <strong>Quantidade:</strong> {this.props.quantidade}
-        </Text>
-        <Text style={styles.textos}>
-          <strong>Marca:</strong> {this.props.marca}
-        </Text>
-        <Text style={styles.textos}>
-          <strong>Referencia:</strong> {this.props.referencia}
-        </Text>
+        <View style={styles.alinhamento}>
+          <Text style={styles.textos}>
+            <strong>Valor:</strong> {this.props.valor}
+          </Text>
+          <Text style={styles.textos}>
+            <strong>Quantidade:</strong> {this.props.quantidade}
+          </Text>
+        </View>
+        <View style={styles.alinhamento}>
+          <Text style={styles.textos}>
+            <strong>Marca:</strong> {this.props.marca}
+          </Text>
+          <Text style={styles.textos}>
+            <strong>Referencia:</strong> {this.props.referencia}
+          </Text>
+        </View>
         <Butoes />
       </View>
     );
@@ -39,6 +43,11 @@ const styles = StyleSheet.create({
   textos: {
     color: "#FFFF",
     padding: 5,
+    marginRight: 5,
+  },
+  alinhamento: {
+    flex: 1,
+    flexDirection: "row",
   },
 });
 

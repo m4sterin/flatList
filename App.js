@@ -61,7 +61,7 @@ class App extends Component {
   }
   render() {
     return (
-      <View style={{ flex: 1, height: 70}}>
+      <View style={{ flex: 1, height: 70 }}>
         <Cabecalho />
         <Text style={styles.titulo}>Lista de Produtos</Text>
         <FlatList
@@ -91,6 +91,9 @@ const styles = StyleSheet.create({
     paddingLeft: 20,
     paddingBottom: 20,
     paddingTop: 15,
+  },
+  prodtxt: {
+    textAlignVertical: "auto",
   },
 });
 
